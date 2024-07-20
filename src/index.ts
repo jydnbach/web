@@ -16,3 +16,5 @@ user.on('save', () => {
 });
 
 user.trigger('change');
+
+// "start:parcel": "npx parcel index.html"
