@@ -3,7 +3,7 @@ import axios, { AxiosPromise } from 'axios';
 // 'http://localhost:3000/users/' // no last forward slash
 
 interface HasId {
-  id: number;
+  id?: number; //optional properties … tsc --init => tsconfig.json => strict mode to true to give ita different behavior
 }
 
 export class Sync<T extends HasId> {
