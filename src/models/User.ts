@@ -1,6 +1,6 @@
 import { Eventing } from './Eventing';
 
-interface UserProps {
+export interface UserProps {
   id?: number;
   name?: string; //optional chaining in order to set args separately
   age?: number;
