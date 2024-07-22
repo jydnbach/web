@@ -1,5 +1,5 @@
 export class UserForm {
-  parent: HTML;
+  parent: Element;
 
   template(): string {
     return `
