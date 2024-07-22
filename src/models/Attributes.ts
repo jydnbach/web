@@ -14,15 +14,19 @@ export class Attributes<T extends object> {
   set(update: T): void {
     Object.assign(this.data, update);
   }
+
+  getAll(): T {
+    return this.data;
+  }
 }
 
-// *keys of an object can be a type as well*
+// // *keys of an object can be a type as well*
 
-const attrs = new Attributes<UserProps>({
-  id: 5,
-  age: 20,
-  name: 'fdsaf',
-});
-const name = attrs.get('name');
-const age = attrs.get('age');
-const id = attrs.get('id');
+// const attrs = new Attributes<UserProps>({
+//   id: 5,
+//   age: 20,
+//   name: 'fdsaf',
+// });
+// const name = attrs.get('name');
+// const age = attrs.get('age');
+// const id = attrs.get('id');
