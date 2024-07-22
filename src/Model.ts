@@ -28,17 +28,21 @@ export class Model<T extends HasId> {
   ) {}
 
   // Passthrough methods
-  get on() {
-    return this.events.on; // return reference, not to call it due to 'getter'
-  }
+  // get on() {
+  //   return this.events.on; // return reference, not to call it due to 'getter'
+  // }
+  // get trigger() {
+  //   return this.events.trigger;
+  // }
 
-  get trigger() {
-    return this.events.trigger;
-  }
+  // get get() {
+  //   return this.attributes.get;
+  // }
 
-  get get() {
-    return this.attributes.get;
-  }
+  // shortened syntax
+  on = this.events.on;
+  trigger = this.events.trigger;
+  get = this.attributes.get;
 
   set(update: T) {
     this.attributes.set(update);
