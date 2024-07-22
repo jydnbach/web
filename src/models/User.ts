@@ -18,4 +18,17 @@ export class User {
   constructor(attrs: UserProps) {
     this.attributes = new Attributes<UserProps>(attrs);
   }
+
+  // Passthrough methods
+  get on() {
+    return this.events.on; // return reference, not to call it due to 'getter'
+  }
+
+  get trigger() {
+    return this.events.trigger;
+  }
+
+  get get() {
+    return this.attributes.get;
+  }
 }
